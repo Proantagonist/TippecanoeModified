@@ -440,8 +440,7 @@ int serialize_feature(struct serialization_state *sst, serial_feature &sf) {
 				warned = extent;
 
 				if (extent > 10000) {
-					fprintf(stderr, "Exiting because this can't be right.\n");
-					exit(EXIT_FAILURE);
+					fprintf(stderr, "Clipping count exceeds 10,000 polygons.\n");
 				}
 			}
 		}
